@@ -104,14 +104,47 @@ nav.links a.current::after{
 .nav-cta:hover{background:var(--gold); color:var(--charcoal) !important;}
 .nav-toggle{display:none; background:none; border:none; color:var(--ivory); font-size:1.4rem; cursor:pointer;}
 
+/* ===== FIXED MOBILE NAV ===== */
 @media (max-width:860px){
-  nav.links{
-    position:fixed; inset:64px 0 0 0; background:var(--charcoal);
-    flex-direction:column; padding:40px 32px; gap:26px; align-items:flex-start;
-    transform:translateY(-110%); transition:transform .25s ease; display:flex;
+  /* 1. Header scrolls away normally on mobile */
+  header.site-nav{
+    position:relative;
+    top:auto;
   }
-  nav.links.open{transform:translateY(0);}
-  nav.links a{font-size:1.1rem;}
+  
+  /* 2. Dropdown beneath the header instead of full-screen overlay */
+  .nav-inner{
+    position:relative;
+  }
+  
+  nav.links{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--charcoal);
+    flex-direction:column;
+    padding:28px 32px;
+    gap:18px;
+    align-items:flex-start;
+    transform:translateY(-8px);
+    opacity:0;
+    visibility:hidden;
+    transition:all .2s ease;
+    display:flex;
+    border-top:1px solid var(--line-dark);
+    box-shadow:0 16px 32px rgba(0,0,0,0.35);
+    max-height:calc(100vh - 70px);
+    overflow-y:auto;
+  }
+  
+  nav.links.open{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+  }
+  
+  nav.links a{font-size:1rem;}
   .nav-toggle{display:block;}
 }
 
