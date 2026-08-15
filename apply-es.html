@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="icon" type="image/png" href="icon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solicitar Trabajar Conmigo — Lorena J. Clowers</title>
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index-es.html" class="brand">Lorena J. Clowers<small>Clowers Author Advisory</small></a>
+    <button class="nav-toggle" aria-label="Menú" onclick="document.querySelector('nav.links').classList.toggle('open')">☰</button>
+    <nav class="links">
+      <a href="index-es.html">Inicio</a>
+      <a href="about-es.html">Sobre mí</a>
+      <a href="services-es.html">Servicios</a>
+      <a href="framework-es.html">Método</a>
+      <a href="results.html">Resultados</a>
+      <a href="blog-es.html">Recursos</a>
+      <a href="apply.html" class="lang-link">EN</a>
+      <a href="apply-es.html" class="nav-cta current">Solicitar Trabajar Conmigo</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding:100px 0 70px;">
+  <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-grid" style="align-items:center;">
+      <div class="hero-copy">
+        <p class="eyebrow">Solicitar</p>
+        <h1 style="font-size:clamp(2.2rem,4.6vw,3.4rem); max-width:720px;">Cuéntame sobre tu libro.</h1>
+        <p class="sub">Unos minutos ahora. Revisado personalmente. Si encaja, te responderé con un siguiente paso recomendado.</p>
+      </div>
+      <div class="hero-portrait">
+        <div class="portrait-frame">
+          <img src="lorena.png" alt="Retrato de Lorena J. Clowers" onerror="this.closest('.portrait-frame').classList.add('portrait-empty')">
+          <div class="portrait-fallback">
+            <span>L J C</span>
+            <small>Añade lorena.png a esta carpeta</small>
+          </div>
+        </div>
+        <p class="portrait-caption">Lorena J. Clowers<br><em>Fundadora, Clowers Author Advisory</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="blueprint-rule" style="margin-bottom:32px;">La solicitud</div>
+        <form class="form" id="apply-form" action="https://formspree.io/f/mwvgajgk" method="POST">
+          <div class="field">
+            <label for="name"><strong>Tu nombre</strong></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="email"><strong>Correo electrónico</strong></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="field">
+            <label for="book_title"><strong>Título del libro (o título provisional)</strong></label>
+            <input type="text" id="book_title" name="book_title" required>
+          </div>
+          <div class="field">
+            <label for="market"><strong>Idioma / mercado principal (opcional)</strong></label>
+            <input type="text" id="market" name="market" placeholder="ej. inglés, italiano, español">
+          </div>
+          <div class="field">
+            <label for="challenge"><strong>Tu mayor desafío de marketing ahora</strong></label>
+            <textarea id="challenge" name="challenge" rows="4" required></textarea>
+          </div>
+          <div class="field">
+            <label for="goal"><strong>Tu objetivo para los próximos 90 días</strong></label>
+            <textarea id="goal" name="goal" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="margin-top:10px;"><strong>Enviar solicitud →</strong></button>
+          <p style="margin-top:16px; font-size:0.82rem; color:var(--text-muted);">El envío se realiza de forma segura vía Formspree. O escribe directamente a <strong>lorena@lorenajclowers.com</strong>.</p>
+        </form>
+      </div>
+      
+      <div style="display:flex; flex-direction:column; gap:40px;">
+        <div style="border:1px solid var(--line); padding:40px; background:var(--ivory); text-align:center;">
+          <img src="consultation.png" alt="Consultoría de Estrategia" style="width:100%; max-width:280px; height:auto; margin-bottom:24px; border:2px solid var(--gold);" onerror="this.style.display='none'">
+          <h3 style="font-size:1.2rem; margin-bottom:12px;"><strong>Qué sucede después</strong></h3>
+          <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">Reviso cada solicitud personalmente. Si puedo ayudar, respondo dentro de <strong>48 horas</strong> con una recomendación específica o invitación a discutir tu proyecto.</p>
+        </div>
+        
+        <div style="background:var(--ivory-dim); padding:32px; border-left:3px solid var(--gold);">
+          <p style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold); margin-bottom:12px;"><strong>NOTA</strong></p>
+          <p style="font-size:0.9rem; color:var(--charcoal); line-height:1.6;">Este <strong>no es un servicio masivo</strong>. Acepto un número limitado de autores para asegurar que cada proyecto reciba atención estratégica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="mega-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-crest">LC</div>
+        <h3>Lorena J. Clowers</h3>
+        <p><strong>Arquitecta de Audiencia para Autores</strong> y estratega internacional de marketing editorial, ayudando a autores a construir lectores, visibilidad y sistemas de ingresos en mercados de habla inglesa, italiana, española, francesa y alemana.</p>
+        <div class="social-icons">
+          <a href="https://www.youtube.com/@lorenajclowers" target="_blank" rel="noopener" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.9 2.5 12 2.5 12 2.5h0s-4.9 0-8.2.4c-.5 0-1.5.1-2.4 1C.7 4.6.5 6.2.5 6.2S.3 8.1.3 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2.1.9 2.6 1 1.9.2 8 .3 8 .3s4.9 0 8.2-.4c.5 0 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.7 14.1V7.6l6.4 3.3-6.4 3.2z"/></svg>
+          </a>
+          <a href="https://x.com/LorenaJClowers" target="_blank" rel="noopener" aria-label="X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@lorenajclowers" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Explorar</h4>
+        <a href="about-es.html">Sobre mí</a>
+        <a href="services-es.html">Servicios</a>
+        <a href="framework-es.html">Método</a>
+        <a href="results.html">Resultados</a>
+        <a href="blog-es.html">Recursos</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <a href="mailto:hello@lorenajclowers.com"><strong>hello@</strong>lorenajclowers.com</a>
+        <p class="footer-note">Preguntas generales</p>
+        <a href="mailto:connect@lorenajclowers.com"><strong>connect@</strong>lorenajclowers.com</a>
+        <p class="footer-note">Alianzas y prensa</p>
+        <p class="footer-note" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line-dark);color:var(--ivory);">¿Sin respuesta en 24 horas? Escríbe a <a href="mailto:lorena@lorenajclowers.com" style="color:var(--gold-bright);text-decoration:underline;"><strong>lorena@lorenajclowers.com</strong></a> — mi bandeja principal.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Empieza Aquí</h4>
+        <p style="font-size:0.88rem;line-height:1.6;">Reescritura gratuita, o solicita trabajar conmigo.</p>
+        <a href="apply.html" class="footer-cta-btn"><strong>Solicitar →</strong></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 <strong>Clowers Author Advisory</strong>. Todos los derechos reservados.</span>
+      <span>Trabajo con autores globalmente, disponible 24/7 salvo vacaciones.</span>
+      <a href="index.html">View in English →</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('click', function(e){
+  if(e.target.matches('.nav-toggle')) return;
+  document.querySelectorAll('nav.links.open').forEach(function(n){ if(!n.contains(e.target)) n.classList.remove('open'); });
+});
+</script>
+</body>
+</html>
