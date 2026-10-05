@@ -11,12 +11,12 @@
 </head>
 <body>
 <!-- ======= ADVERTENCIA OFICIAL DE SUPLANTACIÓN — NO ELIMINAR ======= -->
-<div role="alert" aria-label="Advertencia de suplantación" style="position:relative;z-index:9999;background:#7a0000;background:linear-gradient(180deg,#8b0000 0%,#5c0000 100%);border-bottom:4px solid #ff1a1a;color:#fff;text-align:center;padding:18px 20px;font-family:'Inter',Arial,sans-serif;">
+<div class="impersonation-warning" role="alert" aria-label="Advertencia de suplantación" style="position:fixed;top:0;left:0;right:0;z-index:2147483647;box-sizing:border-box;background:#7a0000;background:linear-gradient(180deg,#8b0000 0%,#5c0000 100%);border-bottom:4px solid #ff1a1a;color:#fff;text-align:center;padding:16px 20px;font-family:'Inter',Arial,sans-serif;">
   <div style="max-width:1100px;margin:0 auto;">
     <p style="margin:0 0 10px;font-size:clamp(1.05rem,2.4vw,1.5rem);font-weight:900;letter-spacing:1px;text-transform:uppercase;line-height:1.3;">&#9888;&#65039; &#9888;&#65039; &#9888;&#65039; PELIGRO: ADVERTENCIA DE SUPLANTACIÓN &#8212; LEE ESTO PRIMERO &#9888;&#65039; &#9888;&#65039; &#9888;&#65039;</p>
     <p style="margin:0 auto;max-width:900px;font-size:clamp(0.85rem,1.6vw,1rem);line-height:1.7;font-weight:600;">
       Mis &#218;NICAS direcciones oficiales de correo son
-      <a href="mailto:lorena@lorenajclowers.com" style="color:#ffd27a;font-weight:900;text-decoration:underline;">lorena@lorenajclowers.com</a> y
+      <a href="mailto:lorena@lorenajclowers.com" style="color:#ffd27a;font-weight:900;text-decoration:underline;">lorena@lorenajclowers.com</a> and
       <a href="mailto:jclowerslorena@gmail.com" style="color:#ffd27a;font-weight:900;text-decoration:underline;">jclowerslorena@gmail.com</a>.
       Mis &#218;NICAS redes sociales oficiales son las enlazadas en este sitio web (YouTube, X, TikTok).
     </p>
@@ -178,6 +178,24 @@ document.addEventListener('click', function(e){
   if(e.target.matches('.nav-toggle')) return;
   document.querySelectorAll('nav.links.open').forEach(function(n){ if(!n.contains(e.target)) n.classList.remove('open'); });
 });
+</script>
+
+<script>
+(function(){
+  function fixBanner(){
+    var b=document.querySelector('.impersonation-warning');
+    if(!b)return;
+    var h=b.offsetHeight;
+    document.body.style.paddingTop=h+'px';
+    var navs=document.querySelectorAll('.site-nav, header, nav');
+    for(var i=0;i<navs.length;i++){
+      var cs=getComputedStyle(navs[i]);
+      if(cs.position==='fixed'||cs.position==='sticky'){navs[i].style.top=h+'px';}
+    }
+  }
+  if(document.readyState==='complete'){fixBanner();}else{window.addEventListener('load',fixBanner);}
+  window.addEventListener('resize',fixBanner);
+})();
 </script>
 </body>
 </html>
